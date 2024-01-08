@@ -1,10 +1,7 @@
 import express from 'express'
 import dotenv from "dotenv"
 import mongoose from 'mongoose'
-import authRoute from './routes/auth.js'
 import hotelsRoute from './routes/hotels.js'
-import usersRoute from './routes/users.js'
-import roomRoute from './routes/room.js'
 import cors from 'cors'
 
 const app = express()
@@ -33,10 +30,9 @@ app.use(express.static('build'))
 //middleware
 app.use(cors())
 app.use(express.json())
-// app.use("/auth", authRoute)
+
 app.use("/hotels", hotelsRoute)
-app.use("/room", roomRoute)
-app.use("/users", usersRoute)
+
 
 
 const Port = process.env.MONGO || 4000
