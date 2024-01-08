@@ -35,7 +35,7 @@ app.use("/hotels", hotelsRoute)
 
 
 
-const Port = process.env.MONGO || 5001
+const Port = 5001
 
 app.listen(Port, ()=>{
     connect()
