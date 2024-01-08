@@ -35,3 +35,9 @@ app.use("/hotels", hotelsRoute)
 
 
 
+const Port = process.env.MONGO || 5001
+
+app.listen(Port, ()=>{
+    connect()
+    console.log("connected to backend")
+})
