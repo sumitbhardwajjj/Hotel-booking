@@ -12,6 +12,10 @@ const app = express()
 
 dotenv.config()
 
+app.get('/',(req,res)=>{
+  res.json("hello world")
+})
+
 const connect = async () =>{
     try {
         await mongoose.connect(process.env.MONGO);
