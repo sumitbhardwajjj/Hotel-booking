@@ -26,7 +26,7 @@ mongoose.connection.on("disconnected", ()=>{
     console.log("Mongodb Disconnected")
 })
 
-app.use(express.static('build'))
+
 //middleware
 app.use(cors())
 app.use(express.json())
