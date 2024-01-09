@@ -5,8 +5,6 @@ import hotelsRoute from './routes/hotels.js'
 import cors from 'cors'
 
 const app = express()
-
-
 dotenv.config()
 
 app.get('/',(req,res)=>{
